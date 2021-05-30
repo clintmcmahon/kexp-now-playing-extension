@@ -21,7 +21,8 @@ body {
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;}
+  align-items: center;
+}
 
 .wrapper .left{
   max-width: 80px;
@@ -34,6 +35,8 @@ body {
 
 .block{
   display: flex;
+  margin-bottom: 2px;
+  font-size: 14px;
 }
 
 .block .label{

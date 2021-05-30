@@ -15,20 +15,15 @@ function App() {
   }, []);
 
   return (
-        <div className="wrapper">
-          {nowPlaying && 
-          <>
+    <div className="wrapper">
+      {nowPlaying &&
+        <>
           <div className="left">
-              <img src={nowPlaying.thumbnail_uri} alt={nowPlaying.album} />
+            <img src={nowPlaying.thumbnail_uri} alt={nowPlaying.album} />
           </div>
           <div className="right">
             <div className="block">
-              <div className="label">
-                Artist:
-        </div>
-              <div className="text">
-                {nowPlaying.artist}
-              </div>
+              NOW PLAYING
             </div>
             <div className="block">
               <div className="label">
@@ -40,6 +35,14 @@ function App() {
             </div>
             <div className="block">
               <div className="label">
+                Artist:
+        </div>
+              <div className="text">
+                {nowPlaying.artist}
+              </div>
+            </div>
+            <div className="block">
+              <div className="label">
                 Album:
             </div>
               <div className="text">
@@ -47,9 +50,9 @@ function App() {
               </div>
             </div>
           </div>
-          </>
-}
-        </div>
+        </>
+      }
+    </div>
   );
 }
 
