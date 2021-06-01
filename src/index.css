@@ -16,6 +16,7 @@ body {
 
 .wrapper{
   height: 100%;
+  padding: 25px;
   background: #000000;
   color: white;
   text-align: center;

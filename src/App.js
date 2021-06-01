@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-
+import Thumbnail from "./components/Thumbnail";
+import TrackInfo from "./components/TrackInfo";
 function App() {
   const [nowPlaying, setNowPlaying] = useState(null);
 
@@ -19,36 +20,14 @@ function App() {
       {nowPlaying &&
         <>
           <div className="left">
-            <img src={nowPlaying.thumbnail_uri} alt={nowPlaying.album} />
+           <Thumbnail thumbnailUri={nowPlaying.thumbnail_uri} album={nowPlaying.album} />
           </div>
           <div className="right">
-            <div className="block">
-              NOW PLAYING
-            </div>
-            <div className="block">
-              <div className="label">
-                Song:
-            </div>
-              <div className="text">
-                {nowPlaying.song}
-              </div>
-            </div>
-            <div className="block">
-              <div className="label">
-                Artist:
-        </div>
-              <div className="text">
-                {nowPlaying.artist}
-              </div>
-            </div>
-            <div className="block">
-              <div className="label">
-                Album:
-            </div>
-              <div className="text">
-                {nowPlaying.album}
-              </div>
-            </div>
+            <TrackInfo 
+              artist={nowPlaying.artist}
+              song={nowPlaying.song}
+              album={nowPlaying.album} 
+            />
           </div>
         </>
       }
