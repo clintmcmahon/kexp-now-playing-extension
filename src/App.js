@@ -27,6 +27,7 @@ function App() {
               artist={nowPlaying.artist}
               song={nowPlaying.song}
               album={nowPlaying.album} 
+              playType={nowPlaying.play_type}
             />
           </div>
         </>

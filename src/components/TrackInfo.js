@@ -1,6 +1,14 @@
 import React from "react";
 
 function TrackInfo(props) {
+    if(props.playType === "airbreak")
+    {
+        return (
+            <div className="block">
+                Air Break
+            </div>
+        )
+    }
     return (
         <>
             <div className="block">
