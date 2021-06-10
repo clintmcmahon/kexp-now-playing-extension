@@ -4,6 +4,11 @@ A browser extension that displays the track, artist and album from the currently
 
 KEXP is a listener-powered radio station out of Seattle Washington and streaming all over the world. Learn more about KEXP and it's mission at [KEXP.org](https://kexp.org/about/)
 
+# Releases
+Firefox: https://addons.mozilla.org/en-US/firefox/addon/kexp-now-playing
+
+Chrome: https://chrome.google.com/webstore/detail/kexp-now-playing/kkfjnljpfpmkjbgnmoejneflokjfcncb
+
 # Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). See the below items to get familiar with how to run/build/test this application.
