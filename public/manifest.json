@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "KEXP Now Playing",
-    "version": "1.0",
+    "version": "1.0.1",
     "description": "An extension that displays what is currently playing on KEXP.org",
     "icons": {
       "192": "logo192.png",

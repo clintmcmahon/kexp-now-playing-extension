@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Thumbnail from "./components/Thumbnail";
-import TrackInfo from "./components/TrackInfo";
+import NowPlaying from "./components/NowPlaying";
 function App() {
   const [nowPlaying, setNowPlaying] = useState(null);
 
@@ -8,30 +7,37 @@ function App() {
     fetch("https://api.kexp.org/v2/plays/")
       .then((response) => response.json())
       .then(data => {
-        let results = data.results;
-        let nowPlaying = results[0];
-        setNowPlaying(nowPlaying);
+
+        if (data.results && data.results.length > 0) {
+          let results = data.results;
+          let trackData = results[0];
+          let nowPlaying = {
+            thumbnailUri: trackData.thumbnail_uri,
+            album: trackData.album,
+            artist: trackData.artist,
+            song: trackData.song,
+            playType: trackData.play_type,
+            comment: trackData.comment,
+            showTitle: "",
+            showDJs:[]
+          };
+
+          let showUri = trackData.show_uri;
+          fetch(showUri)
+            .then(response => response.json())
+            .then((showData => {
+              nowPlaying.showTitle = showData.program_name;
+              nowPlaying.showDJs = showData.host_names;
+              setNowPlaying(nowPlaying);
+            }));
+        };
       })
 
   }, []);
 
   return (
     <div className="wrapper">
-      {nowPlaying &&
-        <>
-          <div className="left">
-           <Thumbnail thumbnailUri={nowPlaying.thumbnail_uri} album={nowPlaying.album} />
-          </div>
-          <div className="right">
-            <TrackInfo 
-              artist={nowPlaying.artist}
-              song={nowPlaying.song}
-              album={nowPlaying.album} 
-              playType={nowPlaying.play_type}
-            />
-          </div>
-        </>
-      }
+      <NowPlaying nowPlaying={nowPlaying} />
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import React from "react";
 
 function TrackInfo(props) {
-    if(props.playType === "airbreak")
-    {
+    
+    if (props.playType === "airbreak") {
         return (
             <div className="block">
                 Air Break
@@ -11,9 +11,6 @@ function TrackInfo(props) {
     }
     return (
         <>
-            <div className="block">
-                NOW PLAYING
-            </div>
             <div className="block">
                 <div className="label">
                     Song:
@@ -25,7 +22,7 @@ function TrackInfo(props) {
             <div className="block">
                 <div className="label">
                     Artist:
-        </div>
+                </div>
                 <div className="text">
                     {props.artist}
                 </div>
@@ -33,7 +30,7 @@ function TrackInfo(props) {
             <div className="block">
                 <div className="label">
                     Album:
-            </div>
+                </div>
                 <div className="text">
                     {props.album}
                 </div>

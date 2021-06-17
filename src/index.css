@@ -1,43 +1,61 @@
 html,
 body,
 #root {
-  min-width: 325px;
+  width: 420px;
 }
 
 body {
   margin: 0;
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .wrapper{
-  height: 100%;
-  padding: 25px;
-  background: #000000;
-  color: white;
-  text-align: center;
+  background-color: #222222;
+  color: #ffffff;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.header{
+  background-color: #feac31;
+  font-weight: 600;
+  color: #222222;
+  padding: 5px 10px;
+}
+
+.header a{
+  text-decoration: none;
+  color: #222222;
+}
+
+.content{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  padding: 10px 10px 0px 10px;
 }
 
-.wrapper .left{
-  max-width: 80px;
-  margin: 10px;
+.comment{
+  padding: 10px;
 }
 
-.wrapper .left img{
+.content .left{
+  width: 25%;
+  margin: 0px 10px 0px 0px;
+}
+
+.content .left img{
   width: 100%;
 }
 
 .block{
   display: flex;
   margin-bottom: 2px;
-  font-size: 14px;
 }
 
 .block .label{
