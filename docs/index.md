@@ -4,7 +4,7 @@ A browser extension that displays the track, artist and album from the currently
 
 KEXP is a listener-powered radio station out of Seattle Washington and streaming all over the world. Learn more about KEXP and it's mission at [KEXP.org](https://kexp.org/about/)
 
-[KEXP Now Playing Browser Extension](https://lh3.googleusercontent.com/8_hLS1V0kKegI-yD1yxcESAh0CGESJnDYKwLdUlETwVIrmGvq9D23-DNIX1IZYjAl0VCunYs2YTAA8L_HGuPO9Ws=w640-h400-e365-rj-sc0x00ffffff)
+![KEXP Now Playing Browser Extension](https://lh3.googleusercontent.com/8_hLS1V0kKegI-yD1yxcESAh0CGESJnDYKwLdUlETwVIrmGvq9D23-DNIX1IZYjAl0VCunYs2YTAA8L_HGuPO9Ws=w640-h400-e365-rj-sc0x00ffffff "KEXP Now Playing Browser Extension]")
 
 # Install
 This extension is available in both Chrome and Firefox. 
